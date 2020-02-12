@@ -1,8 +1,9 @@
-function playGame(argPlayGame) {
+{
+    const playGame = function (argPlayGame) {
     clearMessages();
     playerInput = (argPlayGame);
 
-    function getMoveName(argMoveId) {
+     const getMoveName = function (argMoveId) {
       if (argMoveId === 1) {
         return 'kamień';
       } else if (argMoveId === 2) {
@@ -15,7 +16,7 @@ function playGame(argPlayGame) {
       return 'nieznany ruch';
     }
 
-    function displayResult(argComputerMove, argPlayerMove) {
+     const displayResult = function (argComputerMove, argPlayerMove) {
         printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
         if (argComputerMove === argPlayerMove) {
@@ -39,11 +40,11 @@ function playGame(argPlayGame) {
 
 
 
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
 
     console.log('Wylosowana liczba to: ' + randomNumber);
 
-    let computerMove = getMoveName(randomNumber);
+    const computerMove = getMoveName(randomNumber);
 
     /*
     if(randomNumber == 1){
@@ -61,7 +62,7 @@ function playGame(argPlayGame) {
 
     console.log('Gracz wpisał: ' + playerInput);
 
-    let playerMove = getMoveName(playerInput)
+    const playerMove = getMoveName(playerInput)
 
 
     /*
@@ -98,33 +99,34 @@ function playGame(argPlayGame) {
     }
     */
 
-    let result = displayResult(computerMove, playerMove);
+    const result = displayResult(computerMove, playerMove);
 
 }
 
-function rockButtonClicked() {
+const rockButtonClicked = function () {
   playGame(1);
 }
 
-let rockButton = document.getElementById('play-rock');
+const rockButton = document.getElementById('play-rock');
 
 rockButton.addEventListener('click', rockButtonClicked);
 
 
-function paperButtonClicked() {
+const paperButtonClicked = function () {
   playGame(2);
 }
 
-let paperButton = document.getElementById('play-paper');
+const paperButton = document.getElementById('play-paper');
 
 paperButton.addEventListener('click', paperButtonClicked);
 
 
-function scissorsButtonClicked() {
+const scissorsButtonClicked = function () {
   playGame(3);
 }
 
-let scissorsButton = document.getElementById('play-scissors');
+const scissorsButton = document.getElementById('play-scissors');
 
 scissorsButton.addEventListener('click', scissorsButtonClicked);
 
+}
