@@ -20,21 +20,21 @@
         printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
         if (argComputerMove === argPlayerMove) {
-        printMessage('Jest remis!');
+            printMessage('Jest remis!');
         } else if (argComputerMove === 'kamień' && argPlayerMove === 'papier') {
-        printMessage('Ty wygrywasz!');
+            printMessage('Ty wygrywasz!');
         } else if (argComputerMove === 'kamień' && argPlayerMove === 'nożyce') {
-        printMessage('Ty przegrywasz :(');
+            printMessage('Ty przegrywasz :(');
         } else if (argComputerMove === 'papier' && argPlayerMove === 'kamień') {
-        printMessage('Ty przegrywasz :(');
+            printMessage('Ty przegrywasz :(');
         } else if (argComputerMove === 'papier' && argPlayerMove === 'nożyce') {
-        printMessage('Ty wygrywasz!');
+            printMessage('Ty wygrywasz!');
         } else if (argComputerMove === 'nożyce' && argPlayerMove === 'kamień') {
-        printMessage('Ty wygrywasz!');
+            printMessage('Ty wygrywasz!');
         } else if (argComputerMove === 'nożyce' && argPlayerMove === 'papier') {
-        printMessage('Ty przegrywasz :(');
+            printMessage('Ty przegrywasz :(');
         } else if (argPlayerMove === 'nieznany ruch') {
-        printMessage('Zagraj jeszcze raz :)')
+            printMessage('Zagraj jeszcze raz :)')
         }
     }
 
